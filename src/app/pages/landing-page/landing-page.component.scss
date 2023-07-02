@@ -1,0 +1,36 @@
+.landing-page{
+    text-align: center;
+
+    .url-inp{
+        font-size: 20px;
+    }
+
+    .text-box{
+        padding: 30px;
+        input {
+            font-size:18pt;
+            height:20px;
+            width:200px;
+        }
+    }
+    
+    .error-msg{
+        color: red;
+    }
+
+    .btn{
+        padding: 25px;
+        .gen-btn{
+            background-color: #07d6b9;
+            color: #000503;
+            font-size: 20px; 
+        }
+    }
+    
+    .success-msg{
+        font-size: 20px;
+        span {
+            color: #419106;
+        }
+    }
+}

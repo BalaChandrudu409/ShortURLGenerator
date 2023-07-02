@@ -1,0 +1,26 @@
+<section class="landing-page">
+    <form (ngSubmit)="onSubmit(createUrl)" #createUrl=ngForm>
+        <div class="url-inp">
+            <label>Please enter your URL :</label>
+            <div class="text-box">
+                <input type="text" placeholder="Enter url" ngModel appURLValidator name="url" #numVal="ngModel">
+            </div>
+            <div class="error-msg" *ngIf="(numVal.touched && numVal.invalid) && numVal.errors?.urlInvalid">
+                <p>
+                    Please enter a Valid URL
+                </p>
+            </div>
+        </div>
+
+        <div class="btn">
+            <button class="gen-btn" type="submit">Generate URL</button>
+        </div>
+
+        <div *ngIf="linkCreated" class="success-msg">
+            <p>
+                <span><u>{{'localhost:4200/short' +shortenLink}}</u></span> is shorten URL for
+                <span><u>{{createUrl.value.url}}</u></span>
+            </p>
+        </div>
+    </form>
+</section>
